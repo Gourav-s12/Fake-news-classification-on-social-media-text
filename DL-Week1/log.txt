@@ -1,0 +1,82 @@
+"runeval-" 
+max_inp_len , d
+970 100
+(1060, 970, 100)
+CUDA is not available. Loading model on CPU.
+(1060, 13704) (1060,)
+runing evaluation on Dnn
+Dnn Confusion Matrix:
+[[454  42]
+ [ 21 543]]
+
+
+Dnn Accuracy: 0.9406
+Dnn Precision: 0.9411
+Dnn Recall: 0.9406
+Dnn F1-Score: 0.9405
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.92      0.94       496
+           1       0.93      0.96      0.95       564
+
+    accuracy                           0.94      1060
+   macro avg       0.94      0.94      0.94      1060
+weighted avg       0.94      0.94      0.94      1060
+
+
+
+"runeval-" 
+max_inp_len , d
+970 100
+(1060, 970, 100)
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn
+Cnn Confusion Matrix:
+[[453  43]
+ [ 44 520]]
+
+
+Cnn Accuracy: 0.9179
+Cnn Precision: 0.9179
+Cnn Recall: 0.9179
+Cnn F1-Score: 0.9179
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.91      0.91      0.91       496
+           1       0.92      0.92      0.92       564
+
+    accuracy                           0.92      1060
+   macro avg       0.92      0.92      0.92      1060
+weighted avg       0.92      0.92      0.92      1060
+
+
+
+"runeval-" 
+max_inp_len , d
+970 100
+(1060, 970, 100)
+CUDA is not available. Loading model on CPU.
+runing evaluation on Lstm
+Lstm Confusion Matrix:
+[[  0 496]
+ [  0 564]]
+
+
+Lstm Accuracy: 0.5321
+Lstm Precision: 0.2831
+Lstm Recall: 0.5321
+Lstm F1-Score: 0.3696
+Lstm Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       496
+           1       0.53      1.00      0.69       564
+
+    accuracy                           0.53      1060
+   macro avg       0.27      0.50      0.35      1060
+weighted avg       0.28      0.53      0.37      1060
+
+
+

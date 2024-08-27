@@ -1,0 +1,418 @@
+"Dnn evaltestcustom-" 
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+bert-base-uncased
+input_dim_x -768
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn bert-base-uncased
+Dnn Confusion Matrix:
+[[ 80   1]
+ [  2 117]]
+
+
+Dnn Accuracy: 0.9850
+Dnn Precision: 0.9851
+Dnn Recall: 0.9850
+Dnn F1-Score: 0.9850
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      0.99      0.98        81
+           1       0.99      0.98      0.99       119
+
+    accuracy                           0.98       200
+   macro avg       0.98      0.99      0.98       200
+weighted avg       0.99      0.98      0.99       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+bert-base-cased
+input_dim_x -768
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn bert-base-cased
+Dnn Confusion Matrix:
+[[ 76   5]
+ [  8 111]]
+
+
+Dnn Accuracy: 0.9350
+Dnn Precision: 0.9358
+Dnn Recall: 0.9350
+Dnn F1-Score: 0.9352
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.94      0.92        81
+           1       0.96      0.93      0.94       119
+
+    accuracy                           0.94       200
+   macro avg       0.93      0.94      0.93       200
+weighted avg       0.94      0.94      0.94       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+covid-twitter-bert
+input_dim_x -1024
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn covid-twitter-bert
+Dnn Confusion Matrix:
+[[ 81   0]
+ [  3 116]]
+
+
+Dnn Accuracy: 0.9850
+Dnn Precision: 0.9855
+Dnn Recall: 0.9850
+Dnn F1-Score: 0.9850
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      1.00      0.98        81
+           1       1.00      0.97      0.99       119
+
+    accuracy                           0.98       200
+   macro avg       0.98      0.99      0.98       200
+weighted avg       0.99      0.98      0.99       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+SocBERT-base
+input_dim_x -768
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn SocBERT-base
+Dnn Confusion Matrix:
+[[  1  80]
+ [  0 119]]
+
+
+Dnn Accuracy: 0.6000
+Dnn Precision: 0.7608
+Dnn Recall: 0.6000
+Dnn F1-Score: 0.4552
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.01      0.02        81
+           1       0.60      1.00      0.75       119
+
+    accuracy                           0.60       200
+   macro avg       0.80      0.51      0.39       200
+weighted avg       0.76      0.60      0.46       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+twhin-bert-base
+input_dim_x -768
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn twhin-bert-base
+Dnn Confusion Matrix:
+[[ 81   0]
+ [  2 117]]
+
+
+Dnn Accuracy: 0.9900
+Dnn Precision: 0.9902
+Dnn Recall: 0.9900
+Dnn F1-Score: 0.9900
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99        81
+           1       1.00      0.98      0.99       119
+
+    accuracy                           0.99       200
+   macro avg       0.99      0.99      0.99       200
+weighted avg       0.99      0.99      0.99       200
+
+
+
+"Cnn evaltestcustom-" 
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+bert-base-uncased
+input_dim_x -768
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn bert-base-uncased
+Cnn Confusion Matrix:
+[[ 74   7]
+ [  0 119]]
+
+
+Cnn Accuracy: 0.9650
+Cnn Precision: 0.9669
+Cnn Recall: 0.9650
+Cnn F1-Score: 0.9647
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.91      0.95        81
+           1       0.94      1.00      0.97       119
+
+    accuracy                           0.96       200
+   macro avg       0.97      0.96      0.96       200
+weighted avg       0.97      0.96      0.96       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+bert-base-cased
+input_dim_x -768
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn bert-base-cased
+Cnn Confusion Matrix:
+[[ 81   0]
+ [  7 112]]
+
+
+Cnn Accuracy: 0.9650
+Cnn Precision: 0.9678
+Cnn Recall: 0.9650
+Cnn F1-Score: 0.9652
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      1.00      0.96        81
+           1       1.00      0.94      0.97       119
+
+    accuracy                           0.96       200
+   macro avg       0.96      0.97      0.96       200
+weighted avg       0.97      0.96      0.97       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+covid-twitter-bert
+input_dim_x -1024
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn covid-twitter-bert
+Cnn Confusion Matrix:
+[[ 80   1]
+ [  0 119]]
+
+
+Cnn Accuracy: 0.9950
+Cnn Precision: 0.9950
+Cnn Recall: 0.9950
+Cnn F1-Score: 0.9950
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99        81
+           1       0.99      1.00      1.00       119
+
+    accuracy                           0.99       200
+   macro avg       1.00      0.99      0.99       200
+weighted avg       1.00      0.99      0.99       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+SocBERT-base
+input_dim_x -768
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn SocBERT-base
+Cnn Confusion Matrix:
+[[ 81   0]
+ [119   0]]
+
+
+Cnn Accuracy: 0.4050
+Cnn Precision: 0.1640
+Cnn Recall: 0.4050
+Cnn F1-Score: 0.2335
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.41      1.00      0.58        81
+           1       0.00      0.00      0.00       119
+
+    accuracy                           0.41       200
+   macro avg       0.20      0.50      0.29       200
+weighted avg       0.16      0.41      0.23       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+twhin-bert-base
+input_dim_x -768
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn twhin-bert-base
+Cnn Confusion Matrix:
+[[ 78   3]
+ [  0 119]]
+
+
+Cnn Accuracy: 0.9850
+Cnn Precision: 0.9854
+Cnn Recall: 0.9850
+Cnn F1-Score: 0.9850
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.96      0.98        81
+           1       0.98      1.00      0.99       119
+
+    accuracy                           0.98       200
+   macro avg       0.99      0.98      0.98       200
+weighted avg       0.99      0.98      0.98       200
+
+
+
+"AutoModel evaltestcustom-" 
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+runEval AutoModelForSequenceClassification for bert-base-uncased-
+AutoModelForSequenceClassification_bert-base-uncased.pth
+trainn
+AutoModel Confusion Matrix:
+[[ 81   0]
+ [  2 117]]
+
+
+AutoModel Accuracy: 0.9900
+AutoModel Precision: 0.9902
+AutoModel Recall: 0.9900
+AutoModel F1-Score: 0.9900
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99        81
+           1       1.00      0.98      0.99       119
+
+    accuracy                           0.99       200
+   macro avg       0.99      0.99      0.99       200
+weighted avg       0.99      0.99      0.99       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+runEval AutoModelForSequenceClassification for bert-base-cased-
+AutoModelForSequenceClassification_bert-base-cased.pth
+trainn
+AutoModel Confusion Matrix:
+[[ 81   0]
+ [  0 119]]
+
+
+AutoModel Accuracy: 1.0000
+AutoModel Precision: 1.0000
+AutoModel Recall: 1.0000
+AutoModel F1-Score: 1.0000
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        81
+           1       1.00      1.00      1.00       119
+
+    accuracy                           1.00       200
+   macro avg       1.00      1.00      1.00       200
+weighted avg       1.00      1.00      1.00       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+runEval AutoModelForSequenceClassification for covid-twitter-bert-
+AutoModelForSequenceClassification_covid-twitter-bert.pth
+trainn
+AutoModel Confusion Matrix:
+[[ 78   3]
+ [ 12 107]]
+
+
+AutoModel Accuracy: 0.9250
+AutoModel Precision: 0.9298
+AutoModel Recall: 0.9250
+AutoModel F1-Score: 0.9255
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.96      0.91        81
+           1       0.97      0.90      0.93       119
+
+    accuracy                           0.93       200
+   macro avg       0.92      0.93      0.92       200
+weighted avg       0.93      0.93      0.93       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+runEval AutoModelForSequenceClassification for SocBERT-base-
+AutoModelForSequenceClassification_SocBERT-base.pth
+trainn
+AutoModel Confusion Matrix:
+[[ 78   3]
+ [  2 117]]
+
+
+AutoModel Accuracy: 0.9750
+AutoModel Precision: 0.9750
+AutoModel Recall: 0.9750
+AutoModel F1-Score: 0.9750
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.96      0.97        81
+           1       0.97      0.98      0.98       119
+
+    accuracy                           0.97       200
+   macro avg       0.97      0.97      0.97       200
+weighted avg       0.97      0.97      0.97       200
+
+
+
+Reading twitter - 1grams ...
+Reading twitter - 2grams ...
+Reading english - 1grams ...
+runEval AutoModelForSequenceClassification for twhin-bert-base-
+AutoModelForSequenceClassification_twhin-bert-base.pth
+trainn
+AutoModel Confusion Matrix:
+[[ 81   0]
+ [  2 117]]
+
+
+AutoModel Accuracy: 0.9900
+AutoModel Precision: 0.9902
+AutoModel Recall: 0.9900
+AutoModel F1-Score: 0.9900
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99        81
+           1       1.00      0.98      0.99       119
+
+    accuracy                           0.99       200
+   macro avg       0.99      0.99      0.99       200
+weighted avg       0.99      0.99      0.99       200
+
+
+

@@ -1,0 +1,1 @@
+{"learning_rate": 0.002481580612173, "batch_size": 64, "n_layers": 1, "n_units": 52, "dropout_prob": 0.10374567505647281, "activation": "LeakyReLU", "weight_init_method": "xavier", "optimizer": "RMSprop", "use_early_stopping": false, "patience": 5, "epochs": 13, "cnn_kernel": 2, "cnn_stride": 2, "cnn_padding": 3, "cnn_channel": 64}

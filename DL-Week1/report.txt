@@ -1,0 +1,137 @@
+t1_t3_preprocess.py:
+This python file focuses on preprocessing text data for a misinformation classification task. It loads a 
+dataset from a CSV file, conducts extensive text preprocessing including lemmatization, emoji handling, and special
+ character removal. Task 1 involves splitting the preprocessed data into training, validation, and test sets (80%, 
+ 10%, 10%). Task 3 utilizes TF-IDF vectorization to convert text data into numerical form and saves the resulting 
+ vectors along with labels in separate pickle files.
+This function, data_preprocessor, takes a text input and performs various text preprocessing steps, including 
+removing HTML entities, newline characters, extra spaces, converting to lowercase, tokenizing, removing stopwords 
+and punctuation, lemmatization, handling emojis and hashtags, replacing user mentions and URLs, and specific 
+transformations for the term "covid19." The processed text is then returned.
+
+model.py:
+This python file focuses on training a model for a text classification task using TF-IDF vectors(Dnn) or test_split.csv(Cnn, Lstm). It loads 
+preprocessed data from pickle files (Task 1, 2, 3) and proceeds with Task 4, where a  model is trained, predictions 
+are made on the validation set, and its accuracy is evaluated. The notebook also includes hyperparameter tuning 
+using optuna, displaying the best hyperparameters for the model. The final trained model is then saved as 
+"x_model.pickle".
+
+runeval.py:
+This python file is dedicated to evaluating multiple machine learning models and a FastText model on a test 
+dataset. The models include Dnn, Cnn , Lstm. It iterates through the models, loads each from its respective pickle file, makes 
+predictions on the test set, and evaluates their performance using metrics such as accuracy, precision, recall, and 
+F1-score. 
+
+EvalTestCustom.py:
+same as evaluation.py but this is run on unknown dataset
+
+example-
+python .\EvalTestCustom.py ./unknown.csv Dnn ./Dnn_model.pth
+python .\runeval.py Dnn ./Dnn_model.pth
+
+
+DNN-
+
+Best Hyperparameters: {learning_rate: 0.0019468362913090385
+    batch_size: 32
+    n_layers: 7
+    n_units: 192
+    dropout_prob: 0.18688260255500033
+    activation: PReLU
+    weight_init_method: xavier
+    optimizer: RMSprop
+    use_early_stopping: True
+    patience: 17
+    epochs: 15}
+
+
+Dnn Confusion Matrix:
+[[454  42]
+ [ 21 543]]
+
+
+Dnn Accuracy: 0.9406
+Dnn Precision: 0.9411
+Dnn Recall: 0.9406
+Dnn F1-Score: 0.9405
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.92      0.94       496
+           1       0.93      0.96      0.95       564
+
+    accuracy                           0.94      1060
+   macro avg       0.94      0.94      0.94      1060
+weighted avg       0.94      0.94      0.94      1060
+
+
+Cnn-
+
+Best Hyperparameters: {learning_rate: 0.002481580612173
+    batch_size: 64
+    n_layers: 1
+    n_units: 52
+    dropout_prob: 0.10374567505647281
+    activation: LeakyReLU
+    weight_init_method: xavier
+    optimizer: RMSprop
+    use_early_stopping: False
+    patience: 5
+    epochs: 13
+    cnn_kernel: 2
+    cnn_stride: 2
+    cnn_padding: 3
+    cnn_channel: 64}
+
+Cnn Confusion Matrix:
+[[453  43]
+ [ 44 520]]
+
+
+Cnn Accuracy: 0.9179
+Cnn Precision: 0.9179
+Cnn Recall: 0.9179
+Cnn F1-Score: 0.9179
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.91      0.91      0.91       496
+           1       0.92      0.92      0.92       564
+
+    accuracy                           0.92      1060
+   macro avg       0.92      0.92      0.92      1060
+weighted avg       0.92      0.92      0.92      1060
+
+Lstm-
+
+Best Hyperparameters : {hidden_dim: 234
+    num_layers: 2
+    dropout: 0.06918043209522122
+    bidirectional: True
+    activation: ReLU
+    epochs: 20}
+
+Lstm Confusion Matrix:
+[[  0 496]
+ [  0 564]]
+
+
+Lstm Accuracy: 0.5321
+Lstm Precision: 0.2831
+Lstm Recall: 0.5321
+Lstm F1-Score: 0.3696
+Lstm Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       496
+           1       0.53      1.00      0.69       564
+
+    accuracy                           0.53      1060
+   macro avg       0.27      0.50      0.35      1060
+weighted avg       0.28      0.53      0.37      1060
+
+
+google drive link-
+https://drive.google.com/drive/folders/1i24hXfmcHdqIF0bdgMqW653QE2gR36fT?usp=sharing
+google drive zipped model and files link-
+https://drive.google.com/file/d/1Q68O0Qhdj5E23Mvd8SSwLYw0N7ohCuof/view?usp=sharing

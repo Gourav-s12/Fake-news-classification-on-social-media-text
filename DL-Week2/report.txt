@@ -1,0 +1,538 @@
+
+what argument each file takes-
+
+Vectorize.py "bret model name as 1st argument"
+    1st argument - "bert-base-uncased   bert-base-cased   covid-twitter-bert   twhin-bert-base   SocBERT-base"
+
+Dnn.py "train vector path as 1st argument and test vector path in 2nd argument and ber model name as 3rd argument"
+"example - python Dnn.py bert_vectors_train_bert-base-uncased.pkl bert_vectors_val_bert-base-uncased.pkl bert-base-uncased"
+
+Cnn.py "train vector path as 1st argument and test vector path in 2nd argument and ber model name as 3rd argument"
+"example - python Cnn.py bert_vectors_train_bert-base-uncased.pkl bert_vectors_val_bert-base-uncased.pkl bert-base-uncased"
+
+AutoModel.py "train csv path as 1st argument and test csv path in 2nd argument and ber model name as 3rd argument"
+"example - python AutoModel.py train_split.csv val_split.csv bert-base-uncased"
+(pre Vectorize file having max length issue  , so i am taking csv files as input, aside from it everything is working as needed)
+
+runeval.py "1st argument the path of test vector, 2nd argument model path, 3rd argument type of DL model and 4th argument the bert model typeas cmd args"
+"example - python runeval.py bert_vectors_test_bert-base-uncased.pkl Dnn_model_bert-base-uncased.pth Dnn bert-base-uncased"
+
+evaltestcustom.py "model path 1st argument, test path with name as 2nd argument, 3rd type of DL model as cmd args , 4th the bert model type (for vectorizing)"
+"example - python evaltestcustom.py Dnn_model_bert-base-uncased.pth ./unknown.csv Dnn bert-base-uncased"
+            "python evaltestcustom.py AutoModelForSequenceClassification_twhin-bert-base.pth ./unknown.csv AutoModel twhin-bert-base"
+
+
+
+"Vectorize-" 
+"Dnn-" 
+"Dnn runeval-" 
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn bert-base-uncased
+  Params: 
+    learning_rate: 3.0658290990146e-05
+    batch_size: 128
+    n_layers: 6
+    n_units: 284
+    dropout_prob: 0.08517956439826085
+    activation: ReLU
+    weight_init_method: xavier
+    optimizer: RMSprop
+    use_early_stopping: True
+    patience: 19
+    epochs: 37
+    input_dim: 768
+Dnn Confusion Matrix:
+[[451  45]
+ [ 35 529]]
+
+
+Dnn Accuracy: 0.9245
+Dnn Precision: 0.9246
+Dnn Recall: 0.9245
+Dnn F1-Score: 0.9245
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.93      0.91      0.92       496
+           1       0.92      0.94      0.93       564
+
+    accuracy                           0.92      1060
+   macro avg       0.92      0.92      0.92      1060
+weighted avg       0.92      0.92      0.92      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn bert-base-cased
+  Params: 
+    learning_rate: 0.007527767735101548
+    batch_size: 64
+    n_layers: 10
+    n_units: 236
+    dropout_prob: 0.17034648821343545
+    activation: ReLU
+    weight_init_method: xavier
+    optimizer: Adam
+    use_early_stopping: False
+    patience: 10
+    epochs: 17
+    input_dim: 768
+Dnn Confusion Matrix:
+[[439  57]
+ [ 48 516]]
+
+
+Dnn Accuracy: 0.9009
+Dnn Precision: 0.9010
+Dnn Recall: 0.9009
+Dnn F1-Score: 0.9009
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.89      0.89       496
+           1       0.90      0.91      0.91       564
+
+    accuracy                           0.90      1060
+   macro avg       0.90      0.90      0.90      1060
+weighted avg       0.90      0.90      0.90      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn covid-twitter-bert
+  Params: 
+    learning_rate: 7.153543467206416e-05
+    batch_size: 64
+    n_layers: 9
+    n_units: 379
+    dropout_prob: 0.007909338831945167
+    activation: LeakyReLU
+    weight_init_method: xavier
+    optimizer: RMSprop
+    use_early_stopping: True
+    patience: 15
+    epochs: 26
+    input_dim: 1024
+Dnn Confusion Matrix:
+[[487   9]
+ [ 43 521]]
+
+
+Dnn Accuracy: 0.9509
+Dnn Precision: 0.9530
+Dnn Recall: 0.9509
+Dnn F1-Score: 0.9510
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.98      0.95       496
+           1       0.98      0.92      0.95       564
+
+    accuracy                           0.95      1060
+   macro avg       0.95      0.95      0.95      1060
+weighted avg       0.95      0.95      0.95      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn SocBERT-base
+  Params: 
+    learning_rate: 0.004408044271942192
+    batch_size: 128
+    n_layers: 8
+    n_units: 239
+    dropout_prob: 0.36447311822654177
+    activation: ReLU
+    weight_init_method: xavier
+    optimizer: Adam
+    use_early_stopping: True
+    patience: 17
+    epochs: 33
+    input_dim: 768
+Dnn Confusion Matrix:
+[[  2 494]
+ [  3 561]]
+
+
+Dnn Accuracy: 0.5311
+Dnn Precision: 0.4701
+Dnn Recall: 0.5311
+Dnn F1-Score: 0.3725
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.40      0.00      0.01       496
+           1       0.53      0.99      0.69       564
+
+    accuracy                           0.53      1060
+   macro avg       0.47      0.50      0.35      1060
+weighted avg       0.47      0.53      0.37      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runing evaluation on Dnn twhin-bert-base
+  Params: 
+    learning_rate: 0.0003630413746573841
+    batch_size: 128
+    n_layers: 4
+    n_units: 162
+    dropout_prob: 0.24620783929699563
+    activation: ReLU
+    weight_init_method: xavier
+    optimizer: RMSprop
+    use_early_stopping: True
+    patience: 20
+    epochs: 29
+    input_dim: 768
+Dnn Confusion Matrix:
+[[470  26]
+ [ 29 535]]
+
+
+Dnn Accuracy: 0.9481
+Dnn Precision: 0.9481
+Dnn Recall: 0.9481
+Dnn F1-Score: 0.9481
+Dnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.94      0.95      0.94       496
+           1       0.95      0.95      0.95       564
+
+    accuracy                           0.95      1060
+   macro avg       0.95      0.95      0.95      1060
+weighted avg       0.95      0.95      0.95      1060
+
+
+
+"Cnn-" 
+"Cnn runeval-" 
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn bert-base-uncased
+  Params: 
+    learning_rate: 0.023415908789149696
+    batch_size: 32
+    n_layers: 1
+    n_units: 26
+    dropout_prob: 0.15958426316702234
+    activation: ReLU
+    weight_init_method: normal
+    optimizer: SGD
+    use_early_stopping: False
+    patience: 9
+    epochs: 21
+    cnn_kernel: 1
+    cnn_stride: 1
+    cnn_padding: 0
+    cnn_channel: 32
+    input_dim: 768
+Cnn Confusion Matrix:
+[[410  86]
+ [  5 559]]
+
+
+Cnn Accuracy: 0.9142
+Cnn Precision: 0.9234
+Cnn Recall: 0.9142
+Cnn F1-Score: 0.9132
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.83      0.90       496
+           1       0.87      0.99      0.92       564
+
+    accuracy                           0.91      1060
+   macro avg       0.93      0.91      0.91      1060
+weighted avg       0.92      0.91      0.91      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn bert-base-cased
+  Params: 
+    learning_rate: 2.2341426966201613e-05
+    batch_size: 64
+    n_layers: 1
+    n_units: 77
+    dropout_prob: 0.332462812648119
+    activation: PReLU
+    weight_init_method: uniform
+    optimizer: RMSprop
+    use_early_stopping: True
+    patience: 6
+    epochs: 12
+    cnn_kernel: 3
+    cnn_stride: 1
+    cnn_padding: 3
+    cnn_channel: 128
+    input_dim: 768
+Cnn Confusion Matrix:
+[[466  30]
+ [ 56 508]]
+
+
+Cnn Accuracy: 0.9189
+Cnn Precision: 0.9201
+Cnn Recall: 0.9189
+Cnn F1-Score: 0.9189
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.94      0.92       496
+           1       0.94      0.90      0.92       564
+
+    accuracy                           0.92      1060
+   macro avg       0.92      0.92      0.92      1060
+weighted avg       0.92      0.92      0.92      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn covid-twitter-bert
+  Params: 
+    learning_rate: 0.00017508410392344143
+    batch_size: 128
+    n_layers: 1
+    n_units: 120
+    dropout_prob: 0.17299108975146177
+    activation: PReLU
+    weight_init_method: normal
+    optimizer: SGD
+    use_early_stopping: False
+    patience: 9
+    epochs: 22
+    cnn_kernel: 3
+    cnn_stride: 2
+    cnn_padding: 0
+    cnn_channel: 32
+    input_dim: 1024
+Cnn Confusion Matrix:
+[[472  24]
+ [ 15 549]]
+
+
+Cnn Accuracy: 0.9632
+Cnn Precision: 0.9633
+Cnn Recall: 0.9632
+Cnn F1-Score: 0.9632
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.95      0.96       496
+           1       0.96      0.97      0.97       564
+
+    accuracy                           0.96      1060
+   macro avg       0.96      0.96      0.96      1060
+weighted avg       0.96      0.96      0.96      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn SocBERT-base
+  Params: 
+    learning_rate: 2.5690027695276163e-05
+    batch_size: 32
+    n_layers: 1
+    n_units: 18
+    dropout_prob: 0.3212846657246642
+    activation: LeakyReLU
+    weight_init_method: normal
+    optimizer: SGD
+    use_early_stopping: True
+    patience: 9
+    epochs: 15
+    cnn_kernel: 3
+    cnn_stride: 2
+    cnn_padding: 3
+    cnn_channel: 32
+    input_dim: 768
+Cnn Confusion Matrix:
+[[496   0]
+ [564   0]]
+
+
+Cnn Accuracy: 0.4679
+Cnn Precision: 0.2190
+Cnn Recall: 0.4679
+Cnn F1-Score: 0.2983
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.47      1.00      0.64       496
+           1       0.00      0.00      0.00       564
+
+    accuracy                           0.47      1060
+   macro avg       0.23      0.50      0.32      1060
+weighted avg       0.22      0.47      0.30      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runing evaluation on Cnn twhin-bert-base
+  Params: 
+    learning_rate: 0.00010741351340266124
+    batch_size: 32
+    n_layers: 2
+    n_units: 119
+    dropout_prob: 0.27144118488874663
+    activation: ReLU
+    weight_init_method: xavier
+    optimizer: SGD
+    use_early_stopping: True
+    patience: 7
+    epochs: 16
+    cnn_kernel: 1
+    cnn_stride: 1
+    cnn_padding: 0
+    cnn_channel: 32
+    input_dim: 768
+Cnn Confusion Matrix:
+[[436  60]
+ [ 10 554]]
+
+
+Cnn Accuracy: 0.9340
+Cnn Precision: 0.9375
+Cnn Recall: 0.9340
+Cnn F1-Score: 0.9336
+Cnn Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      0.88      0.93       496
+           1       0.90      0.98      0.94       564
+
+    accuracy                           0.93      1060
+   macro avg       0.94      0.93      0.93      1060
+weighted avg       0.94      0.93      0.93      1060
+
+
+
+"AutoModel-" 
+"AutoModel runeval-" 
+CUDA is not available. Loading model on CPU.
+runEval AutoModelForSequenceClassification for bert-base-uncased-
+AutoModel Confusion Matrix:
+[[476  20]
+ [ 17 547]]
+
+
+AutoModel Accuracy: 0.9651
+AutoModel Precision: 0.9651
+AutoModel Recall: 0.9651
+AutoModel F1-Score: 0.9651
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.96      0.96       496
+           1       0.96      0.97      0.97       564
+
+    accuracy                           0.97      1060
+   macro avg       0.97      0.96      0.96      1060
+weighted avg       0.97      0.97      0.97      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runEval AutoModelForSequenceClassification for bert-base-cased-
+AutoModel Confusion Matrix:
+[[467  29]
+ [ 13 551]]
+
+
+AutoModel Accuracy: 0.9604
+AutoModel Precision: 0.9607
+AutoModel Recall: 0.9604
+AutoModel F1-Score: 0.9603
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.94      0.96       496
+           1       0.95      0.98      0.96       564
+
+    accuracy                           0.96      1060
+   macro avg       0.96      0.96      0.96      1060
+weighted avg       0.96      0.96      0.96      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runEval AutoModelForSequenceClassification for covid-twitter-bert-
+AutoModel Confusion Matrix:
+[[452  44]
+ [ 53 511]]
+
+
+AutoModel Accuracy: 0.9085
+AutoModel Precision: 0.9087
+AutoModel Recall: 0.9085
+AutoModel F1-Score: 0.9085
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.91      0.90       496
+           1       0.92      0.91      0.91       564
+
+    accuracy                           0.91      1060
+   macro avg       0.91      0.91      0.91      1060
+weighted avg       0.91      0.91      0.91      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runEval AutoModelForSequenceClassification for SocBERT-base-
+AutoModel Confusion Matrix:
+[[459  37]
+ [  9 555]]
+
+
+AutoModel Accuracy: 0.9566
+AutoModel Precision: 0.9577
+AutoModel Recall: 0.9566
+AutoModel F1-Score: 0.9565
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      0.93      0.95       496
+           1       0.94      0.98      0.96       564
+
+    accuracy                           0.96      1060
+   macro avg       0.96      0.95      0.96      1060
+weighted avg       0.96      0.96      0.96      1060
+
+
+
+CUDA is not available. Loading model on CPU.
+runEval AutoModelForSequenceClassification for twhin-bert-base-
+AutoModel Confusion Matrix:
+[[476  20]
+ [ 21 543]]
+
+
+AutoModel Accuracy: 0.9613
+AutoModel Precision: 0.9613
+AutoModel Recall: 0.9613
+AutoModel F1-Score: 0.9613
+AutoModel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96       496
+           1       0.96      0.96      0.96       564
+
+    accuracy                           0.96      1060
+   macro avg       0.96      0.96      0.96      1060
+weighted avg       0.96      0.96      0.96      1060
+
+
+
+
+
+
+
+
+
+
+google drive link-
+https://drive.google.com/drive/folders/1QkVr80R7BosUaCa4DVsrjZ3Dt1nHxWYD?usp=sharing
+google drive zipped model and files link-
+https://drive.google.com/file/d/1JLtk13FHuPGGsKDnA-_v4L91-1k2VIAo/view?usp=sharing

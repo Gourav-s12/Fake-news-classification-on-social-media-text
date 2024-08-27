@@ -1,0 +1,1 @@
+{"hidden_dim": 234, "num_layers": 2, "dropout": 0.06918043209522122, "bidirectional": true, "activation": "ReLU", "epochs": 20}

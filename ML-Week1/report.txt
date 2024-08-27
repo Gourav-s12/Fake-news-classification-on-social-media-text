@@ -1,0 +1,178 @@
+t1_t3_preprocess.py:
+This Jupyter notebook focuses on preprocessing text data for a misinformation classification task. It loads a 
+dataset from a CSV file, conducts extensive text preprocessing including lemmatization, emoji handling, and special
+ character removal. Task 1 involves splitting the preprocessed data into training, validation, and test sets (80%, 
+ 10%, 10%). Task 3 utilizes TF-IDF vectorization to convert text data into numerical form and saves the resulting 
+ vectors along with labels in separate pickle files.
+This function, data_preprocessor, takes a text input and performs various text preprocessing steps, including 
+removing HTML entities, newline characters, extra spaces, converting to lowercase, tokenizing, removing stopwords 
+and punctuation, lemmatization, handling emojis and hashtags, replacing user mentions and URLs, and specific 
+transformations for the term "covid19." The processed text is then returned.
+
+model.py:
+This Jupyter notebook focuses on training a model for a text classification task using TF-IDF vectors. It loads 
+preprocessed data from pickle files (Task 1, 2, 3) and proceeds with Task 4, where a  model is trained, predictions 
+are made on the validation set, and its accuracy is evaluated. The notebook also includes hyperparameter tuning 
+using GridSearchCV, displaying the best hyperparameters for the model. The final trained model is then saved as 
+"x_model.pickle".
+
+evaluation.py:
+This Jupyter notebook is dedicated to evaluating multiple machine learning models and a FastText model on a test 
+dataset. The models include Logistic Regression, K-Nearest Neighbors (KNN), K-Means, Neural Network (NN), and 
+Support Vector Machine (SVM). It iterates through the models, loads each from its respective pickle file, makes 
+predictions on the test set, and evaluates their performance using metrics such as accuracy, precision, recall, and 
+F1-score. Additionally, it evaluates a FastText model, loading it from "model_fasttext.bin" and performing a 
+similar evaluation on the test dataset, showcasing a comparison between traditional machine learning and a neural 
+network-based approach.
+
+evaluation_unknown.py:
+same as evaluation.py but this is run on unknown dataset
+
+
+
+
+log-
+Validation Accuracy (Logistic Regression): 0.9320754716981132
+Best Hyperparameters (Logistic Regression): {'C': 1, 'penalty': 'l2', 'solver': 'saga'}
+Validation Accuracy (Logistic Regression): 0.9339622641509434
+
+log_model Confusion Matrix:
+
+
+log_model Accuracy: 0.9292
+log_model Precision: 0.9294
+log_model Recall: 0.9292
+log_model F1-Score: 0.9292
+log_model Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.94      0.91      0.92       496
+           1       0.92      0.95      0.93       564
+
+    accuracy                           0.93      1060
+   macro avg       0.93      0.93      0.93      1060
+weighted avg       0.93      0.93      0.93      1060
+
+
+svm-
+Validation Accuracy: 0.9490566037735849
+Best Hyperparameters: {'C': 1, 'degree': 2, 'gamma': 'scale', 'kernel': 'rbf'}
+Validation Accuracy (SVM): 0.9481132075471698
+
+svm_model Confusion Matrix:
+
+
+svm_model Accuracy: 0.9377
+svm_model Precision: 0.9380
+svm_model Recall: 0.9377
+svm_model F1-Score: 0.9377
+svm_model Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.95      0.92      0.93       496
+           1       0.93      0.96      0.94       564
+
+    accuracy                           0.94      1060
+   macro avg       0.94      0.94      0.94      1060
+weighted avg       0.94      0.94      0.94      1060
+
+
+knn-
+Validation Accuracy (K-nearest Neighbors): 0.9009433962264151
+Best Hyperparameters (K-nearest Neighbors): {'algorithm': 'auto', 'leaf_size': 10, 'n_neighbors': 7, 'p': 2, 'weights': 'distance'}
+Validation Accuracy (K-nearest Neighbors): 0.9018867924528302
+
+
+knn_model Confusion Matrix:
+
+
+knn_model Accuracy: 0.9057
+knn_model Precision: 0.9057
+knn_model Recall: 0.9057
+knn_model F1-Score: 0.9056
+knn_model Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.91      0.89      0.90       496
+           1       0.90      0.92      0.91       564
+
+    accuracy                           0.91      1060
+   macro avg       0.91      0.90      0.91      1060
+weighted avg       0.91      0.91      0.91      1060
+
+
+kmeans-
+Silhouette Score (Validation) for KMeans: 0.005949549632752349
+Accuracy Score (Validation) for KMeans: 0.6698113207547169
+Best Hyperparameters (KMeans): {'algorithm': 'lloyd', 'init': 'random', 'n_clusters': 2, 'n_init': 10}
+Silhouette Score (Train) for KMeans: 0.004873799571783465
+Validation Accuracy for KMeans:: 0.6669811320754717
+
+kmean_model Confusion Matrix:
+
+
+kmean_model Accuracy: 0.6472
+kmean_model Precision: 0.7699
+kmean_model Recall: 0.6472
+kmean_model F1-Score: 0.6138
+kmean_model Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.57      0.98      0.72       496
+           1       0.94      0.36      0.52       564
+
+    accuracy                           0.65      1060
+   macro avg       0.76      0.67      0.62      1060
+weighted avg       0.77      0.65      0.61      1060
+
+
+nn-
+Validation Accuracy (MLPClassifier): 0.9339622641509434
+Best Hyperparameters (MLPClassifier): {'activation': 'relu', 'hidden_layer_sizes': (150,), 'solver': 'lbfgs'}
+Validation Accuracy (NN): 0.9339622641509434
+
+nn_model Confusion Matrix:
+
+
+nn_model Accuracy: 0.9462
+nn_model Precision: 0.9469
+nn_model Recall: 0.9462
+nn_model F1-Score: 0.9461
+nn_model Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.92      0.94       496
+           1       0.93      0.97      0.95       564
+
+    accuracy                           0.95      1060
+   macro avg       0.95      0.94      0.95      1060
+weighted avg       0.95      0.95      0.95      1060
+
+
+fasttext-
+Validation Result (FastText): (1051, 0.9400570884871551, 0.9400570884871551)
+Validation Accuracy (FastText): 0.9386792452830188
+
+
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+fasttext Confusion Matrix:
+
+
+fasttext Accuracy: 0.9443
+fasttext Precision: 0.9447
+fasttext Recall: 0.9443
+fasttext F1-Score: 0.9443
+fasttext Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.96      0.92      0.94       496
+           1       0.93      0.96      0.95       564
+
+    accuracy                           0.94      1060
+   macro avg       0.95      0.94      0.94      1060
+weighted avg       0.94      0.94      0.94      1060
+
+google drive link-
+https://drive.google.com/drive/folders/1UXVSqIa3Ip--3Az0vuXjQ32N8lLJjOon?usp=sharing
+google drive zipped link-
+https://drive.google.com/file/d/1nyFoCe_hLojJrtIyfL1ljtyys4EjVVUL/view?usp=sharing
